@@ -13,7 +13,8 @@ class xpl():
 		payload = """host {0}
  HostName {1}
  ProxyCommand proxytunnel -v -p {2}:{3} -d {1}:{4}
- Port {4}\n""".format(self.remote_host_name, self.remote_host_addr, self.local_proxy_addr, self.local_proxy_port, self.remote_host_port)
+ Port {4}
+ ServerAliveInterval 999999\n""".format(self.remote_host_name, self.remote_host_addr, self.local_proxy_addr, self.local_proxy_port, self.remote_host_port)
 
 		encoded =  base64.b64encode(payload)
 		
