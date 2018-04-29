@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(description='SSH Proxy connector')
 parser.add_argument('-lhost', help='Local proxy ip')
 parser.add_argument('-lport', default=8080, help='Local proxy port, Default(8080).')
 parser.add_argument('-rname', default="server_dummy", help='Target name, i.e: ssh root@server_dummy (Default: server_dummy)')    
-parser.add_argument('-rhost', help='Target ip to connect trough proxy')
+parser.add_argument('-rhost', help='Target ip to connect through proxy')
 parser.add_argument('-rport', default=22, help='Target port',)
 args = parser.parse_args()
 if len(sys.argv) == 1:
