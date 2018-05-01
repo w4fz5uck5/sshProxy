@@ -8,7 +8,7 @@ class xpl():
 		self.local_proxy_port = local_proxy_port
 		self.local_proxy_addr = local_proxy_addr
 
-	def main(self):
+	def main(self): #create a file containing the configuration in $HOME/.ssh/config
 		payload = """host {0}
  HostName {1}
  ProxyCommand proxytunnel -v -p {2}:{3} -d {1}:{4}
