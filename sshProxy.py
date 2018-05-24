@@ -13,7 +13,7 @@ class xpl():
  HostName {1}
  ProxyCommand proxytunnel -v -p {2}:{3} -d {1}:{4}
  Port {4}
- ServerAliveInterval 999999\n""".format(self.remote_host_name, self.remote_host_addr, self.local_proxy_addr, self.local_proxy_port, self.remote_host_port)
+ ServerAliveInterval 10\n""".format(self.remote_host_name, self.remote_host_addr, self.local_proxy_addr, self.local_proxy_port, self.remote_host_port)
 		encoded =  base64.b64encode(payload)
 		os.system("echo {0} | base64 -d  >> $HOME/.ssh/config".format(encoded)) 
 		print "[+] Configuration successfully added"
